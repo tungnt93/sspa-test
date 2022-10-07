@@ -1,0 +1,301 @@
+.home-page {
+    & .content {
+        width: 100%;
+        margin-top: 60px;
+
+        // css chung cho tất cả các section
+        & .section {
+            width: 100%;
+            margin-top: 50px;
+            padding: 0px 50px;
+            box-sizing: border-box;
+
+            & .column {
+                padding: 0px 10px;
+                box-sizing: border-box;
+
+                & .title {
+                    font-size: 16px;
+                    color: #000;
+                }
+                
+                & .text {
+                    font-size: 14px;
+                    color: rgb(101, 101, 101);
+                    font-weight: 500;
+                }
+            }
+
+            & .section-heading {
+                text-align: center;
+                font-size: 30px;
+                font-weight: 700;
+                margin-top: 0px;
+                margin-bottom: 50px;
+                text-transform: uppercase;
+            }
+
+            & .slick-slider {
+                margin-top: 0px;
+            }
+
+            & .slick-arrow {
+                z-index: 198;
+                font-size: 35px;
+                width: 1em;
+                height: 1em;
+                
+                &::before {
+                    color: #AA4396;
+                    font-size: 1em;
+                }
+            }
+        }
+
+        // css cho section 1
+        & .section_1 {
+            .background-img {
+                width: 100%;
+                padding-top: 50%;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin-bottom: 16px;
+            }
+        }
+
+        // css cho section 2
+        & .section_2_3 .column-content {
+            display: flex;
+
+            & .title {
+                margin-top: 0px;
+                margin-bottom: 6px;
+            }
+            & .text {
+                display: -webkit-box;
+                margin: 0px;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            & .icon {
+                margin-right: 15px;
+            }
+
+            & .btn-xemThem-An {
+                color: #000;
+                font-weight: 500;
+                font-size: 15px;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        // css cho section 4
+        & .section_4 {
+            & .row {
+                background-color: rgb(242, 249, 253);
+                padding-bottom: 20px;
+            }
+
+            & .column-content {
+                width: 340px;
+                max-width: 100%;
+                height: fit-content;
+                padding: 0px 15px;
+                box-sizing: border-box;
+                background-color: #fff;
+
+                & .background-img {
+                    width: 80%;
+                    padding-top: 75%;
+                    max-width: 240px;
+                    margin: 0 auto;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+                & .title {
+                    text-align: center;
+                    font-size: 20px;
+                }
+
+                & p {
+                    color: #8B8989 ;
+                    text-align: justify;
+                    display: flex;
+
+                    & .icon {
+                        width: 35px;
+                        height: 35px;
+                        margin-right: 5px;
+                    }
+                }
+
+                & .btn-trai-nghiem {
+                    font-weight: 600;
+                    color: #FFF;
+                    background-image: linear-gradient(90deg, #DA3B0B, #E66917, #EE810C);
+                    padding: 8px 24px;
+                    border: 0px;
+                    border-radius: 20px;
+                    margin: 0 auto;
+                    margin-top: 25px;
+                    display: block;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+
+        // css cho section 5
+        & .section_5 {
+            padding-top: 30px;
+
+            & .row {
+                display: flex;
+                flex-direction: row;
+            }
+
+            & .column {
+                width: 50%;
+                max-width: 620px;
+                padding: 0px 10px;
+
+                & .text {
+                    margin: 25px 0px;
+                }
+
+                & .background-image {
+                    width: 100%;
+                    padding-top: 60%;
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+
+        & .section.section_6 {
+            padding: 0px;
+        }
+    }
+}
+
+// trên mobile và tablet
+@media (max-width: 1023px) {
+    .home-page .content {
+        & .section_4 {
+            & .column {
+                padding: 0px;
+            }
+        }
+        
+        & .section_5 {
+            & .row {
+                flex-direction: column-reverse;
+            }
+            & .column {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        & .section .section-heading {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}
+
+// trên mobile
+@media (max-width: 480px) {
+    .home-page  .content {
+        .section {
+            padding: 0px 10px;
+        }
+
+        & .section_4 {
+            & .column-content {
+                max-width: 100%;
+                margin: 0px auto;
+                padding: 0px 20px;
+            }
+
+            & .slick-arrow {
+                top: 233px;
+                &.slick-prev {
+                    left: 30px;
+                }
+                &.slick-next {
+                    right: 30px;
+                }
+            }
+        }
+    }
+}
+
+// trên tablet
+@media (min-width: 481px) and (max-width: 1023px) {
+    .home-page  .content {
+        & .section {
+            padding: 0px 40px;
+        }
+        
+        & .section_2_3 .column-content {
+            flex-direction: column;
+            text-align: center;
+            
+            & img {
+                margin: 0px auto;
+                margin-bottom: 30px;
+            }
+        }
+
+        & .section_4 {
+            & .column-content {
+                margin: 0 auto;
+            }
+
+            & .slick-prev {
+                left: 50px;
+            }
+            & .slick-next {
+                right: 50px;
+            }
+        }
+    }
+}
+
+// trên pc kích thước lớn
+@media (min-width: 1380px) {
+    .home-page  .content {
+        .section {
+            & .row {
+                max-width: calc( 460px * 3);
+                margin: 0px auto;
+            }
+        }
+
+        & .section_4 {
+            & .row {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        & .section_5 {
+            & .row {
+                justify-content: center;
+            }
+        }
+    }
+}

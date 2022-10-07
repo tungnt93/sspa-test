@@ -1,0 +1,133 @@
+footer {
+    width: 100%;
+    padding: 60px 30px;
+    background-color: rgb(202, 202, 202);
+    box-sizing: border-box;
+
+    & .row {
+       display: flex;
+       justify-content: center;
+    }
+
+    & .column {
+        padding: 0px 10px;
+        width: calc(100% / 3);
+        max-width: 400px;
+
+        &:nth-child(2) {
+            text-align: center;
+        }
+
+        & .banner-ggplay-appStore {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 16px;
+
+            & a {
+                display: block;
+                width: calc(50% - 0px);
+                padding-top: 14%;
+                max-height: 50px;
+                max-width: 155px;
+                margin: 0px 5px;
+                box-sizing: border-box;
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+        & .title {
+            font-size: 18px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        & p, a{
+            font-size: 16px;
+            margin: 16px 0px;
+            font-weight: 500;
+            color: rgb(89, 89, 89);
+            text-decoration: none;
+        }
+
+        & .icon-footer {
+            height: 18px;
+            fill: rgb(89, 89, 89);
+            margin-right: 10px;
+
+            &.icon-email {
+                height: 20px;
+                top: 3px;
+                position: relative;
+            }
+        }
+
+        & a:hover {
+            color: #F79E22;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        & .row {
+            flex-direction: column;
+        }
+
+        & .column {
+            width: 100%;
+            padding: 0px;
+
+            & .text.text {
+                padding: 0px;
+            }
+
+            &:nth-child(2) {
+                text-align: left;
+
+                & .banner-ggplay-appStore {
+                    margin-top: 30px;
+                    justify-content: left;
+
+                    & a {
+                        margin: 0px;
+
+                        &:last-child {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .column:last-child {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    footer {
+        & .column {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 0 5px;
+        }
+
+        & .column:last-child {
+            display: none;
+        }
+    }
+}
+
+// pc kích thước màn lớn
+@media (min-width: 1280px) {
+    footer .column:last-child {
+        margin-left: 15px;
+    }
+}

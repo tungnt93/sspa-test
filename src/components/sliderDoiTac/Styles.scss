@@ -1,0 +1,132 @@
+.slider-doi-tac {
+    background-size: 100% 30%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 0px 50px;
+
+    & .column-slider-doi-tac {
+        padding-top: 92.5px;
+        padding-bottom: 60px;
+        
+        & .column-content {
+            max-width: 100%;
+            width: 225px;
+            background-color: #E9E5E7;
+            border-radius: 15px;
+            margin: 0px auto;
+            padding: 15px;
+            // 92.5 là vị trí của avatar dich lên trên còn 15px là khoảng các giữa avatar và nội bên dưới
+            padding-top: calc(92.5px + 15px);
+            box-sizing: border-box;
+            position: relative;
+
+            & .khung_avatar {
+                width: calc(100% - 30px);
+                height: 195px;
+                padding: 30px;
+                box-sizing: border-box;
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: -92.5px;
+                left: 15px;
+
+                & .avatar {
+                    width: 100%;
+                    height: 100%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .text-info-shop {
+                text-align: center;
+
+                & .name {
+                    font-size: 20px;
+                    display: block;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+
+                & .name-store {
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-right: 5px;
+                    color: #f34267;
+                }
+            }
+
+            & p {
+                font-size: 14px;
+                text-align: justify;
+                margin: 0px;
+                margin-top: 12px;
+            }
+        }
+    }
+
+    & .slick-arrow {
+        z-index: 198;
+        font-size: 35px;
+        width: 1em;
+        height: 1em;
+
+        &.slick-prev {
+            left: -8px;
+        }
+        &.slick-next {
+            right: -5px;
+        }
+
+        &::before {
+            color: #AA4396;
+            font-size: 1em;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-doi-tac {
+        padding: 0px 10px;
+
+        & .slick-arrow {
+            &.slick-prev {
+                left: 30px;
+            }
+            &.slick-next {
+                right: 30px;
+            }
+        }
+    }
+}
+
+// trên tablet
+@media (min-width: 481px) and (max-width: 1023px)  {
+    .slider-doi-tac {
+        padding: 0px 40px;
+
+        & .slick-arrow {
+            &.slick-prev {
+                left: -5px;
+            }
+    
+            &.slick-next {
+                right: -2px;
+            }
+        }
+    }
+}
+
+// trên pc kích thước lớn
+@media (min-width: 1380px) {
+    .slider-doi-tac {
+        & .row {
+            max-width: 100%;
+        }
+
+        & .column-content {
+            width: 310px;
+        }
+    }
+}

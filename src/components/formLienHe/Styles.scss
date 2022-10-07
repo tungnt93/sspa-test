@@ -1,0 +1,102 @@
+.form {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+
+    & .from-title  {
+        font-size: 30px;
+        font-weight: 500;
+        margin: 0px;
+    }
+
+    & .text-from {
+        margin-top: 20px;
+        margin-bottom: 0px;
+
+        & a {
+            color: rgb(255, 137, 0);
+            text-decoration: none;
+        }
+    }
+
+    & .box-input {
+        margin: 0px 10px;
+
+        & .text-error {
+            height: 25px;
+            font-size: 14px;
+            padding-top: 5px;
+            color: red;
+            display: block;
+            text-align: left;
+            padding-left: 25px;
+            box-sizing: border-box;
+        }
+
+        & input {
+            border: 1px solid rgb(213, 213, 213);
+            height: 50px;
+            font-size: 14px;
+            padding: 0px 20px;
+            border-radius: 25px;
+            box-sizing: border-box;
+            width: 100%;
+    
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+
+    & .half-width {
+        display: flex;
+        flex-direction: row;
+        & .box-input {
+            width: 50%;
+        }
+    }
+
+    & .btn-submit {
+        margin-top: 20px;
+        color: #fff;
+        border: 0px;
+        font-size: 18px;
+        height: 50px;
+        width: 300px;
+        border-radius: 30px;
+        padding: 0px;
+        background-image: linear-gradient(90deg , rgb(211, 75, 40), rgb(208, 87, 27), rgb(206, 100, 13));
+        
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        width: 100%;
+
+        & .from-title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+
+        & .box-input {
+            margin: 0px;
+        }
+
+        & .half-width {
+            flex-direction: column;
+            & .box-input {
+                width: 100%;
+            }
+        }
+
+        & .btn-submit {
+            max-width: 100%;
+        }
+    }
+}

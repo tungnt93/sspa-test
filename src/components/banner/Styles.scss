@@ -1,0 +1,50 @@
+.banner {
+    margin-top: 80px;
+
+    // ảnh trang banner chiều cao luôn bằng 26% chiều rộng
+    & .banner-slider .banner-background {
+        padding-top: 26%;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    & .slick-dots {
+        bottom: -23px;
+
+        & li button::before {
+            font-size: 15px;
+        }
+        
+        .slick-active button::before {
+            color: #F3BD3B;
+        }
+    }
+}
+
+// trên moble và tablet
+@media (max-width: 1023px) {
+    .slick-slider .slick-dots {
+        
+        // kích thước  màn hình nhỏ thì các dấu chấm của slider bé lại
+        & li button::before {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        margin-top: 50px;
+
+        & .banner-slider .banner-background {
+            background-size: 100%;
+        }
+    }
+}
+
+// trên tablet
+@media (min-width: 481px) and (max-width: 1023px) {
+    .banner {
+        margin-top: 100px;
+    }
+}

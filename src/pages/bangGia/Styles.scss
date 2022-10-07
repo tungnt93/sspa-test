@@ -1,0 +1,185 @@
+.page-bang-gia .content {
+    margin-top: 80px;
+
+    & .section-heading {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 60px;
+        margin-top: 0px;
+    }
+
+    & .section-bang-gia {
+        padding: 0px 50px;
+
+        & .slick-slider {
+            margin-top: 0px;
+            padding: 0px;
+        }
+
+        & .column-content {
+            width: 225px;
+            margin: 0 auto;
+
+            & .column-content-top {
+                padding-top: 8px;
+                width: 100%;
+                height: 125px;
+                color: #fff;
+                font-size: 20px;
+                font-weight: 500;
+                text-align: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                box-sizing: border-box;
+
+                & span {
+                    text-transform: uppercase;
+
+                    &.name {
+                        display: block;
+                    }
+                }
+            }
+
+            & .column-content-bottom {
+                height: fit-content;
+                width: 100%;
+                padding: 0px 15px;
+                padding-top: 50px;
+                padding-bottom: 35px;
+                box-sizing: border-box;
+                position: relative;
+                top: -75px;
+                box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+                border-bottom-right-radius: 70px;
+
+                & p {
+                    display: block;
+                    margin-bottom: 12px;
+                    margin-top: 0px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    display: flex;
+                    flex-direction: row;
+
+                    & .icon-tick {
+                        height: 12px;
+                        margin-top: 3px;
+                        margin-right: 5px;
+                    }
+
+                    &.tinh-nang-noi-bat {
+                        color: rgb(26, 171, 36);
+                    }
+                }
+
+
+                & .btn-dung-thu {
+                    width: 180px;
+                    height: 35px;
+                    border-radius: 17.5px;
+                    border: 0px;
+                    margin: 0 auto;
+                    display: block;
+                    background: contain;
+                    background-repeat: no-repeat;
+                    margin-top: 20px;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
+                }
+
+                & .box-color {
+                    // chiều cao là chiều cao của màu ở dưới cùng
+                    height: 225px;
+                    background-image: linear-gradient( 168deg, #FFF, #ffffff, #ffffff, #FBECFA, #FBECFA, #F5CDF2, #F2BEEE, #E5A6E0);
+                    position: absolute;
+                    border-bottom-right-radius: 70px;
+                    width: 100%;
+                    left: 0px;
+                    bottom: 0px;
+                    z-index: -1;
+                }
+            }
+        }
+
+        & .slick-arrow {
+            z-index: 198;
+            font-size: 35px;
+            width: 1em;
+            height: 1em;
+            top: 250px;
+
+            &.slick-prev {
+                left: -8px;
+            }
+
+            &.slick-next {
+                right: -5px;
+            }
+
+            &::before {
+                color: #AA4396;
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .page-bang-gia .column-content {
+       
+        & .section-heading {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}
+
+// trên mobile
+@media (max-width: 480px) {
+    .page-bang-gia .content {
+        & .section-heading {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        & .section-bang-gia {
+            padding: 0px 10px;
+
+            & .slick-arrow {
+                &.slick-prev {
+                    left: 30px;
+                }
+    
+                &.slick-next {
+                    right: 30px;
+                }
+            }
+        }
+    }
+}
+
+// trên tablet
+@media (min-width: 481px) and (max-width: 1023px) {
+    .page-bang-gia .content {
+        & .section-bang-gia {
+            padding: 0px 40px;
+
+            & .slick-arrow {
+                &.slick-prev {
+                    left: -5px;
+                }
+    
+                &.slick-next {
+                    right: -2px;
+                }
+            }
+        }
+    }
+}

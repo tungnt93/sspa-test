@@ -1,0 +1,19 @@
+@font-face {
+  font-family:UTM_NOKIA_STANDARD ;
+  src: url(./assets//font-family/UTM_NOKIA_STANDARD.TTF);
+}
+
+@font-face {
+  font-family:UTM_NOKIA_STANDARDB ;
+  src: url(./assets//font-family/UTM_NOKIA_STANDARDB.TTF);
+}
+
+body {
+  margin: 0;
+  font-family: UTM_NOKIA_STANDARD, UTM_NOKIA_STANDARDB;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
